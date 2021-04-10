@@ -1,0 +1,68 @@
+Comandos Git:
+°git init: Es para crear nuestro repositorio local (la carpeta .git, osea la master branch => rama principal).
+
+°git status: Nos muestra el estado de los archivos, si estan en rojo estan untrakect y si estan en verde estan trakect.
+
+°git add (archivo): Es para subir los cambios hechos a el spacio de trabajo y poner un archivo en trakect. Podemos usar "git add (archivo)" o "git add ." para agregar y cambiar el estado de todos los archivos.
+
+°git commit -m "(mensaje)": Esto es para subir los archivos QUE ESTAN TRAKECT al repositoria local (la base de datos).
+
+°git log: Nos permite ver los commits que hemos hecho listandolos de mas nuevo a mas viejo, tambien les da una etiqueta a los commits para identificarlos y trabajar con ellos llamada sha (el conjunto de numeros y letras en verde manzana).
+
+°git log --oneline: permite mostrar los commits hechos sin tanta informacion.
+
+°git log --all --graph: permite mostrar los commits en un grafico que muestra tambien la creacion de ramas.
+
+°git log --all --graph --decorate --oneline: es una fucion entre git log --oneline y git log --all --graph.
+
+°git show: nos muestra los cambios que subimos en el ultimo commit.
+
+°git diff (sha antiguo) (sha nuevo): muetras las diferencias entre un commit viejo y otro nuevo.
+
+°git reset (sha) --hard: nos permite "borrar" los commit que estan por arriba de la sha especificado, "--hard" indica que va a borrar hasta el estado del archivo, es decir, lo va a dejar untracket y el archivo va a tener los cambios del ultimo commit.
+
+°git reset (sha) --soft: hace lo mismo que --hard solo que esta vez el archivo se queda en el area de trabajo, es decir, queda tracket y no cambia su contenido.
+
+°git checkout (sha) (archivo): permite volver a ver el contenido de un commit antiguo sin borrar los otros commits y tambien se puede hacer un nuevo cambio, agegarlo al area de trabajo y subirlo al repositorio local,partiendo del commit donde ahora nos encontramos.
+
+°git checkout master (archivo): permite volver al commit actual y ver su contenido. "master" hace referencia a "(HEAD -> master)" que aparece, cuando introducimos el comando "git log" o "git log --oneline", en el commit actual.
+
+°git branch (nombre): esto nos permite crear una rama.
+
+°git branch --list: mostramos las ramas que tenemos. La rama en la que estamos esta de color verde.
+
+°git checkout (branch): para poder entrar a una rama.
+
+°git commit -am "(mensaje)": de esta manera no tenemos que escribir "git add" y despues "git commit -m", sino que de una vez realizamos estos dos pasos con este comando.
+
+°git merge (branch): esto es para fucionar ramas. Debemos pararnos en la rama que queremos que absorva a la otra, ej: si estamos parados en la rama B, y queremos que la rama X se fucione con la B, debemos pararnos en X y aplicar el comando.
+
+°git restore (archivo): permite que el archivo vuelva a estar como estuvo en el ultimo commit.
+
+°git remote add (nombre de la conexion, simepre tratemos de llamarla origin) (url del repo remoto): este comando es para crear una conexcion entre nuestro repo local y nuestro repo remoto (GitHub).
+
+°git remote -v: es para ver las conexiones que tenemos entre nuestros repositorios.
+
+°git remote set-url origin (url): se utiliza para cambiar la direccion url con las que conectamos los repos.
+
+°git pull origin master --allow-unrelated-histories: para traer los archivos del repo remoto al repo local (este se utiliza solo una vez cuando creamos el repositorio remoto).
+
+°git push origin master: para empujar nuestros archivos (si el repo remoto es nuevo) y cambios a el repo remto.
+
+°git pull origin master: para taer los cambios al repo local.
+
+°alias (nombre)="(comando)": sirve para guardar comandos en variables las cuales depsues podemos llamar, de esta manera no hace falta escribir el comando sino solo escribir el nombre de su variable, su alias.
+
+°git tag -a (version) -m "(mensaje)" (sha): de esta manera creamos tags.
+
+°git tag: para ver los tags que tenemos.
+
+°git show-ref --tags: para ver con que commit esta enlazado ese tag.
+
+°git push origin --tags: para enviar los tags al repo remoto.
+
+°git tag -d (nombre tag): para borrar tags en el repo local.
+
+°git push origin :refs/tags/(nombre tag): para borrar tags en el repo remoto.
+
+°gitk: abre una ventana donde podemos ver los cambios que hemos hecho hasta ahora junto con la grafica.

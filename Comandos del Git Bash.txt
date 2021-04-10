@@ -1,0 +1,40 @@
+Git Bash comandos:
+° pwd --> muestra la ruta actual.
+
+° ls --> Lista los elementos (archivos y/o carpetas) que hay en la ruta actual.
+
+° ls -al --> Lista los elementos (archivos y/o carpetas) que hay en la ruta actual, junto con los elementos ocultos.
+
+ls -al No es un comando, ls si lo es pero -al son dos letras que hacen referencias, "a" (all muestra todo hasta los archivos ocultos) y "l" (coloca todos los archivosy elementos uno abajo de otro).
+
+Cuando queremos usar letras que hacen cierta accion debemos poner -(letra), si queremos usar una palabra que hacen cierta accion debemos poner --(palabra).
+
+° clear --> Sirve para limpiar el bash (pantalla). Para este comando hay un atajo que es CTRL+L.
+
+° cd .. --> Nos permite retroceder una carpeta.
+
+° cd (nombre de la carpeta) --> Entro a una de las carpetas en la ruta actual. Cuando aparace ~ significa que estamos en la ruta principal, en este caso ana. Si colocamos las primeras letras del nombre de la carpeta y presinamos TAB nos va a auto completar el nombre, en caso de que solo haya una carpeta con esas letras inciales, o nos va lanzar carpetas que empienzen con esas letras, en caso de que existan carpetas con esas letras.
+
+° mkdir (nombre carpeta) --> crear carpeta.
+
+° touch (nombre.txt) --> crear archivo de texto plano.
+
+° cat (nombre del archivo) --> Ver archivo por medio de la terminal.
+
+° history --> permite ver el historial de comando usados.
+
+° ! numero de linea --> Tomando en cuenta el historial de comandos podemos volver a ejecutar comandos con este comando, donde colocamos ! y luego el numero de linea que tiene el comando en el historial de comandos.
+
+° rm (nombre del archivo) --> sirve para borrar archivos. Importante, no aplicar este comando en el disco C ya que puede borrar nuestro servidor.
+
+° comando (rm, ls, etc..) --help --> nos dice todas las letras o palabras que se pueden usar para este comando.
+
+°code (archivo) --> nos permite crear un archivo y abrirlo en VSCode. Si ya esta credo nos permite abrirlo.
+
+°ssh-keygen -t rsa -b 4096 -C "name_email@gmail.com": este comando se ejecuta solo una vez para un equipo y se ejecuta en la carpeta principal del equipo (sabemos que estamos en ella porque aparece esto ~ despues de MINGW64), sirve para crear una llave privada y publica para trabajar con el protocolo de seguridad ssh en GitHub.
+
+°eval $(ssh-agent -s): nos permite ver si nuestro puerto esta actvo para recibir archivos por ssh (si aparece Agent pid numero, significa que esta funcionando).
+
+°ssh-add ~/.ssh/id_rsa : para adherir nuestra llave privada al nuestro correo.
+
+°git clone (url repo remoto): para cluonar un repositorio en otro equipo.
